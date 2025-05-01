@@ -4,7 +4,7 @@ import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import React from 'react';
 
 type PayRowProps = {
-    pay: { day: string; who: string; for: string; price: number };
+    pay: { date: string; person: string; purpose: string; price: number };
 };
 
 const PayRow: React.FC<PayRowProps> = ({ pay }) => {
@@ -21,9 +21,9 @@ const PayRow: React.FC<PayRowProps> = ({ pay }) => {
                 }}
             >
                 <Box>
-                    <Box sx={{ textAlign: 'left' }}>{pay.for}</Box>
+                    <Box sx={{ textAlign: 'left' }}>{pay.purpose}</Box>
                     <Box sx={{ textAlign: 'left' }}>
-                        {pay.day}に{pay.who}が支払い
+                        {pay.date}に{pay.person}が支払い
                     </Box>
                 </Box>
                 <Stack direction="row" spacing={1}>

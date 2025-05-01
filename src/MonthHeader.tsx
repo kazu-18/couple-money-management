@@ -3,7 +3,7 @@ import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 type MonthHeaderProps = {
-    month: number;
+    month: string;
 };
 
 const MonthHeader: React.FC<MonthHeaderProps> = ({ month }) => {

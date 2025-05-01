@@ -3,7 +3,12 @@ import PayRow from './PayRow';
 
 type PayTableProps = {
     title: string;
-    payTable: { day: string; who: string; for: string; price: number }[];
+    payTable: {
+        date: string;
+        person: string;
+        purpose: string;
+        price: number;
+    }[];
 };
 
 const PayTable: React.FC<PayTableProps> = ({ title, payTable }) => {
@@ -20,7 +25,14 @@ const PayTable: React.FC<PayTableProps> = ({ title, payTable }) => {
                 }}
             >
                 {payTable.map((pay) => {
-                    return <PayRow pay={pay} />;
+                    return (
+                        <PayRow
+                            pay={pay}
+                            key={
+                                pay.date + pay.person + pay.purpose + pay.price
+                            }
+                        />
+                    );
                 })}
             </Box>
         </>

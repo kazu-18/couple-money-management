@@ -1,6 +1,6 @@
 import { Box, Stack } from '@mui/material';
 type SummaryProps = {
-    summary: { userA: string; userB: string; price: number };
+    summary: { from: string; to: string; price: number };
 };
 
 const Summary: React.FC<SummaryProps> = ({ summary }) => {
@@ -10,8 +10,8 @@ const Summary: React.FC<SummaryProps> = ({ summary }) => {
             justifyContent={'center'}
             alignItems={'flex-end'}
         >
-            <Box sx={{ fontSize: 20 }}>{summary.userA}</Box>が
-            <Box sx={{ fontSize: 20 }}>{summary.userB}</Box>に
+            <Box sx={{ fontSize: 20 }}>{summary.from}</Box>が
+            <Box sx={{ fontSize: 20 }}>{summary.to}</Box>に
             <Box sx={{ fontSize: 20 }}>{summary.price}円</Box>支払い
         </Stack>
     );
